@@ -3,6 +3,7 @@ import {alfredTip} from '@kentcdodds/react-workshop-app/test-utils'
 import {render, screen, fireEvent} from '@testing-library/react'
 import {getItems} from '../filter-cities'
 import App from '../final/02'
+// import App from '../final/02.extra-1'
 // import App from '../exercise/02'
 
 jest.mock('../filter-cities')

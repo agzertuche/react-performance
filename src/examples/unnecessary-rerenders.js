@@ -1,10 +1,15 @@
 // http://localhost:3000/isolated/examples/unnecessary-rerenders.js
 
 import * as React from 'react'
+/*
+eslint
+  no-func-assign: 0,
+*/
 
 function CountButton({count, onClick}) {
   return <button onClick={onClick}>{count}</button>
 }
+CountButton = React.memo(CountButton)
 
 function NameInput({name, onNameChange}) {
   return (
@@ -13,6 +18,7 @@ function NameInput({name, onNameChange}) {
     </label>
   )
 }
+NameInput = React.memo(NameInput)
 
 function Example() {
   const [name, setName] = React.useState('')
